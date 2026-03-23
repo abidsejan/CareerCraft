@@ -4,6 +4,8 @@ CareerCraft Pro is a Streamlit-based AI career assistant that combines interview
 
 The project is built as a single-file Streamlit application: [interview_agent.py](/Users/abid/Downloads/CareerCraft/interview_agent.py).
 
+See live preview at https://career-craft-pro.streamlit.app
+
 ## What It Does
 
 CareerCraft Pro helps a user prepare for job applications end to end:
