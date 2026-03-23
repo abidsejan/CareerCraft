@@ -239,36 +239,7 @@ Inside the app, the following configuration values are currently defined in code
 - `HISTORY_FILE = "careercraft_history.json"`
 - `GROQ_MODEL = "llama-3.3-70b-versatile"`
 
-## Important Security Note
 
-The current code contains a Groq API key directly inside [interview_agent.py](/Users/abid/Downloads/CareerCraft/interview_agent.py). This is not safe for production or public repositories.
-
-Recommended improvement:
-
-1. Remove the hardcoded API key from the source file.
-2. Store it in an environment variable instead.
-3. Load it with something like:
-
-```python
-import os
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
-```
-
-Then run the app like this:
-
-macOS/Linux:
-
-```bash
-export GROQ_API_KEY="your_api_key_here"
-streamlit run interview_agent.py
-```
-
-Windows PowerShell:
-
-```powershell
-$env:GROQ_API_KEY="your_api_key_here"
-streamlit run interview_agent.py
-```
 
 ## Known Limitations
 
@@ -278,18 +249,6 @@ streamlit run interview_agent.py
 - The app stores history locally in JSON rather than using a database.
 - There is no automated test suite yet.
 
-## Recommended Next Improvements
-
-- Move secrets to environment variables
-- Split the app into modules:
-  - prompts
-  - utilities
-  - exporters
-  - UI sections
-- Add a `requirements.txt`
-- Add automated tests for parsing and export helpers
-- Add stronger validation for CV and job-description inputs
-- Add richer company research and application tracking features
 
 ## Troubleshooting
 
@@ -323,17 +282,7 @@ Also note that some job sites block scraping or render content dynamically.
 
 Some PDFs extract poorly depending on how they were generated. If possible, use `.docx` or `.txt` for better text extraction.
 
-## Future README Additions You May Want
+## Owner
+Abid Hasan 
+https://github.com/abidsejan
 
-If by "including a;;" you meant extra sections, good candidates would be:
-
-- screenshots
-- architecture overview
-- deployment guide
-- contribution guide
-- license
-- changelog
-
-## License
-
-No license file is currently included in this project. If you plan to publish it, add a license such as MIT, Apache-2.0, or a proprietary internal-use license.
