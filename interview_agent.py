@@ -43,7 +43,7 @@ except ImportError:
 
 HISTORY_FILE = "careercraft_history.json"
 GROQ_MODEL   = "llama-3.3-70b-versatile"
-GROQ_API_KEY = "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"
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 
 MODES = {
     "Full Interview":  "full",
